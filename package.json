@@ -6,17 +6,25 @@
   "scripts": {
     "prebuild": "./node_modules/.bin/eslint *.js",
     "dev": "parcel ./src/html/index.hbs",
-    "build": "parcel build ./src/html/index.hbs"
+    "build": "parcel build ./src/html/index.hbs",
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
   "keywords": [],
   "author": "Max-Andre Zils <zilsmc@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
     "sass": "^1.22.3",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "watch": "^1.0.2"
   },
   "dependencies": {
     "parcel-plugin-handlebars": "^0.4.4"
