@@ -7,7 +7,7 @@
     "prebuild": "./node_modules/.bin/eslint *.js",
     "dev": "parcel ./src/html/index.hbs",
     "build": "parcel build ./src/html/index.hbs",
-    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "lint": "eslint --fix ./src/typescript/* && echo 'Lint complete.'",
     "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
   "keywords": [],
