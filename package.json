@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild": "./node_modules/.bin/eslint *.js",
+    "prebuild": "./node_modules/.bin/eslint ./src/javascript/* && echo 'Lint Completed...'",
     "dev": "parcel ./src/html/index.hbs",
     "build": "parcel build ./src/html/index.hbs",
-    "lint": "eslint --fix ./src/typescript/* && echo 'Lint complete.'",
+    "lint": "eslint --fix ./src/javascript/* && echo 'Lint Completed...'",
     "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
   },
   "keywords": [],
@@ -15,7 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-react": "^7.0.0",
-    "eslint": "^6.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
