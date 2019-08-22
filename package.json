@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prebuild": "./node_modules/.bin/eslint ./src/javascript/* && echo 'Lint Completed...'",
-    "dev": "parcel ./src/html/index.html",
-    "build": "parcel build ./src/html/index.html",
-    "lint": "eslint --fix ./src/javascript/* && echo 'Lint Completed...'",
-    "watch": "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src"
+    "prebuild": "./node_modules/.bin/eslint ./src/typescript/* && echo 'Lint Completed...'",
+    "dev"     : "parcel ./src/html/index.html",
+    "build"   : "parcel build ./src/html/index.html",
+    "lint"    : "eslint --fix ./src/typescript/* && echo 'Lint Completed...'",
+    "watch"   : "watch 'clear && npm run -s test | tap-nirvana && npm run -s lint' src",
+    "clean"   : "rm -rf dist/*"
   },
   "keywords": [],
   "author": "Max-Andre Zils <zilsmc@gmail.com>",
